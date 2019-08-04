@@ -10,6 +10,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  TextEditingController searchController = TextEditingController();
+
   // variaveis
   String _search;
   int _offset;
@@ -36,6 +39,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,8 +53,10 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.all(10.0),
+            padding: EdgeInsets.fromLTRB(10.0,10.0,10.0,10.0),
             child: TextField(
+              controller: searchController,
+              autofocus: true,
               decoration: InputDecoration(
                   labelText: "Pesquise Aqui",
                   labelStyle: TextStyle(color: Colors.white),

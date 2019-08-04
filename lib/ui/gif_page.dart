@@ -14,7 +14,7 @@ class GifPage extends StatelessWidget {
           this._gifData["title"],
           style: TextStyle(color: Colors.black),
         ),
-        backgroundColor: Colors.yellow,
+        backgroundColor: Colors.blue,
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.share),
